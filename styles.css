@@ -1,0 +1,28 @@
+* { 
+	padding:  0;
+	margin:  0;
+	box-sizing: border-box;
+ }
+ img{
+ 	max-width: 100%;
+ }
+ /*///////header///////*/
+@media (max-width: 950px) {
+	body{
+		padding: 0px 20px;
+	}
+	.Logo__dimension{
+		width: 50%;
+		justify-content: center;
+	}
+}
+@media (max-width: 500px) {
+
+}
+
+@media (min-width: 500px) {
+
+}
+@media (min-widht: 950px) {
+
+}
