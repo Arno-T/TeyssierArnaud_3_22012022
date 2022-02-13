@@ -10,8 +10,7 @@
  }
  a{
   	text-decoration: none;
-
- }
+}
  i{
  	font-size: 20px;
  }
@@ -112,9 +111,6 @@
     	color: #7C7C7C;
     	font-size: 20px;
 	}
-	.Navigation__txt{
-		font-size: 18px;
-	}
 	.color{
 		color: white;
 	}
@@ -167,7 +163,23 @@
 		position: relative;
 		left: 90%;
 		bottom: 70px;
+		color: grey;
 	}
+	.Icon-heart:hover {
+	  animation: fill 1s ease-out;
+	  background: linear-gradient(#9356DC, #FF79DA);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  font-weight: bold;
+	}
+	@keyframes fill{
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	 }
 	/*/////////Footer/////////*/
 	.ft__title{
 		font-size: 24px;
@@ -190,4 +202,98 @@
 	}
 	.ft__elem--txt{
 		color: white;
+	}
+
+	/*////////////////Les menus//////////////*/
+	/*///////header///////*/
+	.Head-menu {
+		padding: 30px 25px 10px 25px;
+		align-items: center;
+	}
+	.Arrow-color {
+		color: grey;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.Menu-logo{
+		display: flex;
+		justify-content: center;
+		margin-top: -30px;
+	}
+	/*///////imgs///////*/
+	.Images__prcp {
+	   max-height: 300px;
+	   width: 100%;
+	   object-fit: cover;
+	}
+	/*///////section///////*/
+	.Boite-menu {
+	   margin-top: -30px;
+  	   position: relative;
+       border-radius: 30px 30px 0 0;
+  	   background-color: #f6f6f6;
+  	   padding: 35px 15px 80px 15px;
+	}
+	.Menu-titre {
+	   display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-bottom: 45px;
+	}
+	.Titres__section {
+	   font-family: "Shrikhand", sans-serif;
+	   font-size: 30px;
+	}
+	.Heart-icon {
+		color: grey;
+	}
+	.Heart-icon:hover {
+	   animation: fill 1s ease-out;
+	   background: linear-gradient(#9356DC, #FF79DA);
+	   -webkit-background-clip: text;
+	   -webkit-text-fill-color: transparent;
+	   font-weight: bold;
+	}
+	.Elem__part {
+		margin-bottom: 40px;
+	}
+	.Titres__elem {
+	   font-size: 24px;
+	   margin-bottom: 20px;
+	}
+	.Menu {
+	    height: 70px;
+        width: 100%;
+        padding-left: 10px;
+        background-color: white;
+  		display: flex;
+  		align-items: center;
+  		border-radius: 15px;
+  		margin-bottom: 15px;
+	}
+	.nom{
+	   font-size: 20px;
+	   font-weight: 500;
+	}
+    .nom__accpgmt{
+       font-size: 16px;
+    }
+    .nom__accpgmt--prix{
+       font-size: 16px;
+       font-weight: 600;
+       display: flex;
+       justify-content: flex-end;
+    }
+	.button-command{
+	   	display: block;
+       	width: max-content;
+	    margin: auto;
+	    background-image: linear-gradient(#FF79DA, #9356DC);
+	    border-radius: 30px;
+	    box-shadow: 2px 2px 10px #c4c3c0;
+	    padding: 15px 40px;
+	    font-weight: bold;
+	    transform: scale(1);
+	    transition: transform 500ms;
+	    opacity: 1;
 	}
