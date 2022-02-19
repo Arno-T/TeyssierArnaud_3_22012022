@@ -55,11 +55,11 @@
 	.Service__title{
     	margin-bottom: 20px;
     	font-weight: bolder;
-    	font-size: 24px;
+    	font-size: 26px;
 	}
 	.Service__txt{
 		margin-bottom: 30px;
-		font-size: 17px;
+		font-size: 22px;
 	}
 	.Service__exploration{
 		display: block;
@@ -93,6 +93,12 @@
 	    padding: 0 70px 0 30px;
 	    margin-bottom: 20px;
 	    margin-left: 10px;
+	}
+	.Navigation__list--elem:hover{
+		background-color: #f2eafb;
+	}
+	.Navigation__list--elem:hover i{
+		color: #9356DC;
 	}
 	.Navigation__num{
 		height: 25px;
@@ -131,11 +137,12 @@
 		width: 80px;
 		background-color: #99E2D0;
 		color: #008766;
-		position: relative;
-		left: 80%;
-		top: 50px;
+		position: absolute;
+		right: 15px;
+		top: 15px;
 	}
 	.Imgs{
+		 position: relative;
 	    height: 280px;
 	    margin-bottom: 20px;
 	    border-radius: 10px;
@@ -152,17 +159,20 @@
 		font-size: 18px;
 		font-weight: 700;
 		color: black;
+		padding: 10px;
 	}
 	.Imgs__txt{
 		font-size: 16px;
 		color: black;
-		padding: 5px 0px 0px 5px;
+		padding: 0px 10px;
+	}
+	.Imgs__icon {
+		position: absolute;
+		right: 40px;
+		bottom: 25px;
 	}
 	.Icon-heart{
 		font-size: 20px;
-		position: relative;
-		left: 90%;
-		bottom: 70px;
 		color: grey;
 	}
 	.Icon-heart:hover {
@@ -199,11 +209,70 @@
 	}
 	.ft__elem--icon{
 		margin-right: 10px;
+		color: white;
 	}
 	.ft__elem--txt{
 		color: white;
 	}
+	/*/////////Responsive index/////////*/
+	@media screen and (min-width: 600px) {
+	  .Boite {
+	    width: 100%;
+	    margin: auto;
+	  }
+	}
+@media screen and (min-width: 900px) {
+  .Navigation__list{
+  	display: flex;
+  	justify-content: space-around;
+  	flex-wrap: wrap;
+  }
+  .Navigation__title{
+  	font-size: 26px;
+  }
+  .Navigation__txt{
+  	font-size: 20px;
+  }
+  .Restaurant__title {
+  	display: flex;
+  	justify-content: center;
+  }
+  .Boite {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .Imgs {
+    width: 47%;
+    margin: 14px 10px;
+  }
+  .Icon-heart{
+		font-size: 20px;
+		color: grey;
+	} 
+}
+@media screen and (min-width: 1025px) {
+  .Boite {
+  	 display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+  }
 
+}@media screen and (min-width: 1720px) {
+  .Icon-heart{
+		font-size: 20px;
+		color: grey;
+	}
+  h2 {
+    text-align: center;
+  }
+   .Imgs {
+  	margin: 18px;
+  }
+}
 	/*////////////////Les menus//////////////*/
 	/*///////header///////*/
 	.Head-menu {
@@ -262,10 +331,10 @@
 	   margin-bottom: 20px;
 	}
 	.Menu {
-	    height: 70px;
-        width: 100%;
-        padding-left: 10px;
-        background-color: white;
+	   height: 70px;
+      width: 100%;
+      padding-left: 10px;
+      background-color: white;
   		display: flex;
   		align-items: center;
   		border-radius: 15px;
@@ -285,8 +354,8 @@
        justify-content: flex-end;
     }
 	.button-command{
-	   	display: block;
-       	width: max-content;
+	    display: block;
+       width: max-content;
 	    margin: auto;
 	    background-image: linear-gradient(#FF79DA, #9356DC);
 	    border-radius: 30px;
