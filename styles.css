@@ -19,7 +19,7 @@
  }
  footer{
  	background-color: #353535;
-  	padding: 25px;
+  padding: 25px;
  }
 
  	/*///////header///////*/
@@ -36,8 +36,8 @@
  		display: flex;
  		justify-content: center;
  		background-color: #eaeaea;
-    	font-weight: 700;
-    	box-shadow: inset 0px 2px 5px 0px #c4c3c0;
+    font-weight: 700;
+    box-shadow: inset 0px 2px 5px 0px #c4c3c0;
  	}
  	.Localisation__icon{
  		padding: 15px 22px;
@@ -123,7 +123,7 @@
 	/*/////////Section/////////*/
 	.Restaurant{
 		padding: 50px 20px 45px 20px;
-    	background-color: #f6f6f6;
+    background-color: #f6f6f6;
 	}
 	.Restaurant__title{
 		font-size: 26px;
@@ -142,18 +142,18 @@
 		top: 15px;
 	}
 	.Imgs{
-		 position: relative;
-	    height: 280px;
-	    margin-bottom: 20px;
-	    border-radius: 10px;
-	    box-shadow: 2px 2px 10px #c4c3c0;
+		position: relative;
+	  height: 280px;
+	  margin-bottom: 20px;
+	  border-radius: 10px;
+	  box-shadow: 2px 2px 10px #c4c3c0;
 	}
 	.Imgs__dimension{
 		display: block;
-	    height: 205px;
-	    width: 100%;
-	    border-radius: 10px 10px 0 0;
-	    object-fit: cover;
+	  height: 205px;
+	  width: 100%;
+	  border-radius: 10px 10px 0 0;
+	  object-fit: cover;
 	}
 	.Imgs__title{
 		font-size: 18px;
@@ -215,10 +215,10 @@
 		color: white;
 	}
 	/*/////////Responsive index/////////*/
-	@media screen and (min-width: 600px) {
-	  .Boite {
-	    width: 100%;
-	    margin: auto;
+@media screen and (min-width: 600px) {
+	.Boite {
+		width: 100%;
+	  margin: auto;
 	  }
 	}
 @media screen and (min-width: 900px) {
@@ -253,7 +253,7 @@
 }
 @media screen and (min-width: 1025px) {
   .Boite {
-  	 display: flex;
+  	display: flex;
     width: 100%;
     margin: auto;
   }
@@ -291,23 +291,23 @@
 	}
 	/*///////imgs///////*/
 	.Images__prcp {
-	   max-height: 300px;
-	   width: 100%;
-	   object-fit: cover;
+	  max-height: 300px;
+	  width: 100%;
+	  object-fit: cover;
 	}
 	/*///////section///////*/
 	.Boite-menu {
-	   margin-top: -30px;
-  	   position: relative;
-       border-radius: 30px 30px 0 0;
-  	   background-color: #f6f6f6;
-  	   padding: 35px 15px 80px 15px;
+	  margin-top: -30px;
+  	position: relative;
+    border-radius: 30px 30px 0 0;
+  	background-color: #f6f6f6;
+  	padding: 35px 15px 80px 15px;
 	}
 	.Menu-titre {
-	   display: flex;
-       align-items: center;
-       justify-content: space-between;
-       margin-bottom: 45px;
+	  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
 	}
 	.Titres__section {
 	   font-family: "Shrikhand", sans-serif;
@@ -330,39 +330,103 @@
 	   font-size: 24px;
 	   margin-bottom: 20px;
 	}
-	.Menu {
-	   height: 70px;
-      width: 100%;
-      padding-left: 10px;
-      background-color: white;
-  		display: flex;
-  		align-items: center;
-  		border-radius: 15px;
-  		margin-bottom: 15px;
+	.Menu{
+	  height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+	}
+	.Menu__txt{
+		width: 100%;
+	}
+	.Menu__txt p {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.nom{
-	   font-size: 20px;
-	   font-weight: 500;
+		font-size: 20px;
+		font-weight: 500;
 	}
-    .nom__accpgmt{
-       font-size: 16px;
-    }
-    .nom__accpgmt--prix{
-       font-size: 16px;
-       font-weight: 600;
-       display: flex;
-       justify-content: flex-end;
-    }
+  .nom__accpgmt{
+    font-size: 16px;
+  }
+  .nom__accpgmt--prix{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .Menu__check{
+    height: 70px;
+		width: 0;
+		background-color: #99E2D0;
+		margin-left: 25px;
+		margin-right: -70px;
+		border-radius: 0 10px 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
+  }
+  .check_icons{
+  	color: white;
+    font-size: 20px;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: all 0.5 s ease-in-out;
+  }
+  .Menu:hover .Menu__txt{
+  	width: 80%;
+  }
+  .Menu:hover .check_icons {
+		opacity: 1;
+    transform: rotate(360deg);
+	}
+	.Menu:hover .Menu__check{
+		width: 20%;
+  	margin-right: 0px;	
+	}
 	.button-command{
-	    display: block;
-       width: max-content;
-	    margin: auto;
-	    background-image: linear-gradient(#FF79DA, #9356DC);
-	    border-radius: 30px;
-	    box-shadow: 2px 2px 10px #c4c3c0;
-	    padding: 15px 40px;
-	    font-weight: bold;
-	    transform: scale(1);
-	    transition: transform 500ms;
-	    opacity: 1;
+	  display: block;
+    width: max-content;
+	  margin: auto;
+	  background-image: linear-gradient(#FF79DA, #9356DC);
+	  border-radius: 30px;
+	  box-shadow: 2px 2px 10px #c4c3c0;
+	  padding: 15px 40px;
+	  font-weight: bold;
+	  transform: scale(1);
+	  transition: transform 500ms;
+	  opacity: 1;
 	}
+/*/////////Responsive Menus/////////*/
+@media screen and (min-width: 900px) {
+	.Boite-menu {
+		width: 80%;
+    margin: auto;
+	}
+	.Menu {
+		display: flex;
+		justify-content: center;
+		width: 85%;
+		margin: 10px 70px;
+	}
+	.Titres__elem{
+		text-align: center;
+	}
+}
+@media screen and (min-width: 1350px) {
+  .Boite-menu {
+		width: 100%;
+	}
+  .Boite-dimension {
+  	display: flex;
+  	justify-content: space-around;
+  }
+  .Menu {
+		width: 100%;
+		margin: 10px 70px;
+	}
+}
