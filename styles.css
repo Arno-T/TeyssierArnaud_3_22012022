@@ -14,9 +14,6 @@
  i{
  	font-size: 20px;
  }
- h4{
- 	padding: 10px 0px 0px 5px;
- }
  footer{
  	background-color: #353535;
   padding: 25px;
@@ -325,6 +322,7 @@
 	}
 	.Elem__part {
 		margin-bottom: 40px;
+		width: 100%;
 	}
 	.Titres__elem {
 	   font-size: 24px;
@@ -338,9 +336,10 @@
     align-items: center;
     border-radius: 10px;
     margin-bottom: 15px;
+    overflow: hidden;
 	}
 	.Menu__txt{
-		width: 100%;
+		width: 80%;
 	}
 	.Menu__txt p {
 		white-space: nowrap;
@@ -358,6 +357,19 @@
     font-size: 16px;
     font-weight: 600;
   }
+  .Menu__prix {
+  	width: 20%;
+  }
+  .Menu{
+	  height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+	}
   .Menu__check{
     height: 70px;
 		width: 0;
@@ -375,10 +387,10 @@
     font-size: 20px;
     opacity: 0;
     transform: rotate(0deg);
-    transition: all 0.5 s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .Menu:hover .Menu__txt{
-  	width: 80%;
+  	width: 60%;
   }
   .Menu:hover .check_icons {
 		opacity: 1;
@@ -407,14 +419,59 @@
 		width: 80%;
     margin: auto;
 	}
+	.Boite-dimension {
+		display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	}
 	.Menu {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		width: 85%;
-		margin: 10px 70px;
+		margin: 10px 0px;
 	}
 	.Titres__elem{
 		text-align: center;
+	}
+	.Elem__part {
+		margin-bottom: 40px;
+		width: 80%;
+	}
+	.Menu{
+	  height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+	}
+	.Menu__check{
+    height: 70px;
+		width: 0;
+		background-color: #99E2D0;
+		margin-left: 25px;
+		margin-right: -70px;
+		border-radius: 0 10px 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
+  }
+  .Menu:hover .Menu__txt{
+  	width: 60%;
+  }
+  .Menu:hover .check_icons {
+		opacity: 1;
+    transform: rotate(360deg);
+	}
+	.Menu:hover .Menu__check{
+		width: 20%;
+  	margin-right: 0px;	
+	}
+	.Menu__txt{
+		width: 80%;
 	}
 }
 @media screen and (min-width: 1350px) {
@@ -427,6 +484,36 @@
   }
   .Menu {
 		width: 100%;
-		margin: 10px 70px;
+		margin: 10px 0px;
 	}
+	.Elem__part {
+		margin-bottom: 40px;
+		width: 25%;
+	}
+	.Titres__elem {
+	   font-size: 24px;
+	   margin-bottom: 20px;
+	}
+	.Menu{
+	  height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+	}
+  .Menu__check{
+    height: 70px;
+		width: 0;
+		background-color: #99E2D0;
+		margin-left: 25px;
+		margin-right: -70px;
+		border-radius: 0 10px 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
+  }
 }
