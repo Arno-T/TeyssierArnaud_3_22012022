@@ -10,7 +10,7 @@
  }
  a{
   	text-decoration: none;
-}
+	}
  i{
  	font-size: 20px;
  }
@@ -18,7 +18,68 @@
  	background-color: #353535;
   padding: 25px;
  }
-
+ .wrap-spin {
+ 	display: flex;
+  justify-content: center;
+  align-items: center;
+ 	width: 100vw;
+ 	height: 100vh;
+ 	animation: opaque 0s ease-in 3s forwards;
+ 	animation-fill-mode: forwards;
+ }
+ .spinner { 
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.spinner-text {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.spinner-component {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  mix-blend-mode: hue;
+}
+.Primaire {
+  border-top: 8px solid #9356DC;
+  animation: load 1300ms linear;
+  z-index: -1;
+}
+.Secondaire {
+  border-top: 8px solid #FF79DA;
+  animation: load 1600ms ease-out;
+  z-index: -3;
+}
+.Tertiaire {
+  border-top: 8px solid #99E2D0;
+  animation: load 1900ms ease-in;
+  z-index: -2;
+}
+@keyframes load {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opaque {
+  to {
+  	width: 0;
+  	height: 0;
+  	visibility: hidden;
+  }
+}
+header, main, footer {
+	width: 0;
+  height: 0;
+  visibility: hidden;
+}
  	/*///////header///////*/
  	.Logo{							
  		display: flex;
@@ -333,6 +394,7 @@
     width: 100%;
     background-color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -340,6 +402,7 @@
 	}
 	.Menu__txt{
 		width: 80%;
+		padding: 0px 0px 0px 15px
 	}
 	.Menu__txt p {
 		white-space: nowrap;
@@ -358,18 +421,10 @@
     font-weight: 600;
   }
   .Menu__prix {
-  	width: 20%;
+  	display: flex;
+    justify-content: flex-end;
+    padding: 0px 15px 0px 0px;
   }
-  .Menu{
-	  height: 70px;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden;
-	}
   .Menu__check{
     height: 70px;
 		width: 0;
@@ -387,7 +442,7 @@
     font-size: 20px;
     opacity: 0;
     transform: rotate(0deg);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   .Menu:hover .Menu__txt{
   	width: 60%;
@@ -397,7 +452,7 @@
     transform: rotate(360deg);
 	}
 	.Menu:hover .Menu__check{
-		width: 20%;
+		width: 80px;
   	margin-right: 0px;	
 	}
 	.button-command{
@@ -415,20 +470,10 @@
 	}
 /*/////////Responsive Menus/////////*/
 @media screen and (min-width: 900px) {
-	.Boite-menu {
-		width: 80%;
-    margin: auto;
-	}
 	.Boite-dimension {
 		display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-	}
-	.Menu {
-		display: flex;
-		justify-content: space-between;
-		width: 85%;
-		margin: 10px 0px;
 	}
 	.Titres__elem{
 		text-align: center;
@@ -447,37 +492,14 @@
     margin-bottom: 15px;
     overflow: hidden;
 	}
-	.Menu__check{
-    height: 70px;
-		width: 0;
-		background-color: #99E2D0;
-		margin-left: 25px;
-		margin-right: -70px;
-		border-radius: 0 10px 10px 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.5s ease-in-out;
-  }
   .Menu:hover .Menu__txt{
   	width: 60%;
   }
-  .Menu:hover .check_icons {
-		opacity: 1;
-    transform: rotate(360deg);
-	}
-	.Menu:hover .Menu__check{
-		width: 20%;
-  	margin-right: 0px;	
-	}
 	.Menu__txt{
 		width: 80%;
 	}
 }
 @media screen and (min-width: 1350px) {
-  .Boite-menu {
-		width: 100%;
-	}
   .Boite-dimension {
   	display: flex;
   	justify-content: space-around;
@@ -494,26 +516,4 @@
 	   font-size: 24px;
 	   margin-bottom: 20px;
 	}
-	.Menu{
-	  height: 70px;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden;
-	}
-  .Menu__check{
-    height: 70px;
-		width: 0;
-		background-color: #99E2D0;
-		margin-left: 25px;
-		margin-right: -70px;
-		border-radius: 0 10px 10px 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.5s ease-in-out;
-  }
 }
