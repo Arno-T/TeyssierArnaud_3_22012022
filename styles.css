@@ -18,6 +18,7 @@
  	background-color: #353535;
   padding: 25px;
  }
+ /*/////////Animation Chragement/////////*/
  .wrap-spin {
  	display: flex;
   justify-content: center;
@@ -25,17 +26,12 @@
  	width: 100vw;
  	height: 100vh;
  	animation: opaque 0s ease-in 3s forwards;
- 	animation-fill-mode: forwards;
+ 	animation-fill-mode: both;
  }
  .spinner { 
   width: 200px;
   height: 200px;
   position: relative;
-}
-.spinner-text {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 20px;
-  text-align: center;
 }
 .spinner-component {
   position: absolute;
@@ -47,17 +43,17 @@
 }
 .Primaire {
   border-top: 8px solid #9356DC;
-  animation: load 1300ms linear;
+  animation: load 3300ms linear;
   z-index: -1;
 }
 .Secondaire {
   border-top: 8px solid #FF79DA;
-  animation: load 1600ms ease-out;
+  animation: load 3600ms ease-out;
   z-index: -3;
 }
 .Tertiaire {
   border-top: 8px solid #99E2D0;
-  animation: load 1900ms ease-in;
+  animation: load 3900ms ease-in;
   z-index: -2;
 }
 @keyframes load {
@@ -72,13 +68,7 @@
   to {
   	width: 0;
   	height: 0;
-  	visibility: hidden;
   }
-}
-header, main, footer {
-	width: 0;
-  height: 0;
-  visibility: hidden;
 }
  	/*///////header///////*/
  	.Logo{							
@@ -302,7 +292,7 @@ header, main, footer {
   }
   .Imgs {
     width: 47%;
-    margin: 14px 10px;
+    margin: 20px 10px;
   }
   .Icon-heart{
 		font-size: 20px;
@@ -386,8 +376,22 @@ header, main, footer {
 		width: 100%;
 	}
 	.Titres__elem {
-	   font-size: 24px;
-	   margin-bottom: 20px;
+	  font-size: 24px;
+	}
+	/*.Titres__elem::after {
+		content: "";
+		display: flex;
+		align-items: center;
+	  margin-top: 5px;
+	  width: 40px;
+	  height: 3px;
+	  background-color: #99E2D0;
+	}*/
+	.Titres__line--elem {
+		border-bottom: 5px solid #99E2D0;
+		height: 5px;
+		width: 60px;
+		margin-bottom:20px;
 	}
 	.Menu{
 	  height: 70px;
@@ -399,6 +403,30 @@ header, main, footer {
     border-radius: 10px;
     margin-bottom: 15px;
     overflow: hidden;
+    animation: appear 0.5s;
+	  animation-timing-function: cubic-bezier(0.01, 0.50, 0.20, 0.80);
+	  transform: scale(0);
+	  animation-fill-mode: both;
+	}
+	@keyframes appear{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+	}
+	.Delay1 {
+  animation-delay: 0.3s;
+	}
+	.Delay2 {
+	  animation-delay: 0.5s;
+	}
+	.Delay3 {
+	  animation-delay: 0.7s;
+	}
+	.Delay4 {
+	  animation-delay: 0.9s;
 	}
 	.Menu__txt{
 		width: 80%;
@@ -417,6 +445,7 @@ header, main, footer {
     font-size: 16px;
   }
   .nom__accpgmt--prix{
+  	justify-content: flex-end;
     font-size: 16px;
     font-weight: 600;
   }
@@ -478,6 +507,22 @@ header, main, footer {
 	.Titres__elem{
 		text-align: center;
 	}
+	.Titres__line{
+		display: flex;
+		justify-content: center;
+	}
+	.Titres__line--elem1{
+		justify-content: center;
+		margin-right: 40px;
+	}
+	.Titres__line--elem2{
+		justify-content: center;
+		margin-right: 12px;
+	}
+	.Titres__line--elem3{
+		justify-content: center;
+		margin-right: 54px;
+	}
 	.Elem__part {
 		margin-bottom: 40px;
 		width: 80%;
@@ -514,6 +559,5 @@ header, main, footer {
 	}
 	.Titres__elem {
 	   font-size: 24px;
-	   margin-bottom: 20px;
 	}
 }
