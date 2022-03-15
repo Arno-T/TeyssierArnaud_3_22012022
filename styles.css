@@ -310,18 +310,15 @@
     width: 100%;
     margin: auto;
   }
-  h2 {
+  .Navigation__title {
     text-align: center;
   }
-
-}@media screen and (min-width: 1720px) {
+}
+@media screen and (min-width: 1720px) {
   .Icon-heart{
 		font-size: 20px;
 		color: grey;
 	}
-  h2 {
-    text-align: center;
-  }
    .Imgs {
   	margin: 18px;
   }
@@ -336,6 +333,14 @@
 		color: grey;
 		display: flex;
 		justify-content: flex-start;
+		width: 20px;
+	}
+	.Arrow-color:hover {
+		animation: fill 1s ease-out;
+	  background: linear-gradient(#99E2D0, #9356DC);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  font-weight: bold;
 	}
 	.Menu-logo{
 		display: flex;
@@ -449,7 +454,7 @@
   .Menu__prix {
   	display: flex;
     justify-content: flex-end;
-    padding: 0px 15px 0px 0px;
+    padding: 0px 20px 0px 0px;
   }
   .Menu__check{
     height: 70px;
@@ -499,7 +504,6 @@
     opacity: 0.8;
     box-shadow: 2px 5px 5px 0px black;
 	}
-	}
 /*/////////Responsive Menus/////////*/
 @media screen and (min-width: 900px) {
 	.Boite-dimension {
@@ -507,10 +511,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
 	}
-	.Titres__elem{
-		text-align: center;
+	.Titres__elem {
+		font-size: 24px;
+	  text-align: center;
 	}
-	.Titres__line{
+	.Titres__line {
 		display: flex;
 		justify-content: center;
 	}
@@ -559,8 +564,5 @@
 	.Elem__part {
 		margin-bottom: 40px;
 		width: 25%;
-	}
-	.Titres__elem {
-	   font-size: 24px;
 	}
 }
