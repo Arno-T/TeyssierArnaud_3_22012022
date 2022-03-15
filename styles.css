@@ -494,6 +494,12 @@
 	  transition: transform 500ms;
 	  opacity: 1;
 	}
+	.button-command:hover {
+		transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 2px 5px 5px 0px black;
+	}
+	}
 /*/////////Responsive Menus/////////*/
 @media screen and (min-width: 900px) {
 	.Boite-dimension {
