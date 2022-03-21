@@ -25,7 +25,7 @@
   align-items: center;
  	width: 100vw;
  	height: 100vh;
- 	animation: opaque 0s ease-in 3s forwards;
+ 	animation: Disappear 0s ease-in 3s forwards;
  	animation-fill-mode: both;
  }
  .spinner { 
@@ -64,7 +64,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes opaque {
+@keyframes Disappear {
   to {
   	width: 0;
   	height: 0;
