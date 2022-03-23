@@ -25,8 +25,8 @@
   align-items: center;
  	width: 100vw;
  	height: 100vh;
- 	animation: Disappear 0s ease-in 3s forwards;
- 	animation-fill-mode: both;
+ 	animation: Disappear 0s ease-in 3s;
+ 	animation-fill-mode: forwards;
  }
  .spinner { 
   width: 200px;
